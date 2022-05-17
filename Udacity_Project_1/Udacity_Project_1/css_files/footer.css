@@ -1,0 +1,5 @@
+.footer{
+    grid-area: ft;
+    background-color: aqua;
+    height: 100px;
+}
