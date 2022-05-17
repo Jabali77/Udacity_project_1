@@ -1,0 +1,148 @@
+@import 'h1.css';
+@import 'button.css';
+@import 'footer.css';
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(.5, .5fr);
+    grid-template-rows: 350px 750px;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft";
+    
+}
+
+.nestedGrid{
+    display:grid;
+  }
+
+.nestedGrid > *{
+   border: 5px solid black;
+   padding-bottom: 10px;
+}
+
+.features{
+    border: 2px solid black;
+}
+
+.main_background{
+    color: rgb(212, 133, 90);
+}
+
+
+ h3{
+    text-align: center;
+    color: aqua;
+    font-size: x-large;
+}
+
+p{
+    padding: 10px;
+    color: aqua;
+    font-size: large;
+}
+
+a{
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+
+.header{
+    grid-area: hd;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    background-image: url('image_7.jpg');
+    
+    
+}
+
+.sidebar{
+    grid-area: sd;
+}
+
+.content{
+    grid-area: main;
+    color: black;
+    background-color: rgb(219, 144, 115);
+    height: auto;
+
+}
+
+.grid-item-1{
+    background-image: url('image3.jpg');
+    background-size: contain;
+
+}
+
+.grid-item-2{
+    background-image: url('image3.jpg');
+    background-size: contain;
+}
+
+@media(min-width:1232px){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 350px 600px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd"
+        "main main main main main main main main"
+        "ft ft ft ft ft ft ft ft";
+        
+    }
+
+    h3{
+        color: aqua;
+    }
+
+    p {
+        color: aqua;
+    }
+
+    a{
+        padding-left: 10px;
+    }
+
+    .features{
+        border: 1px solid black;
+    }
+
+    .nestedGrid{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        height: 570px;
+        grid-gap: 50px;
+        padding-inline-end: 50px;
+        padding-top: 25px;
+        
+      }
+
+}
+
+
+@media(min-width:677px) {
+
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 250px 600px;
+        grid-template-areas: 
+        "hd"
+        "main"
+        "ft";
+        
+    }
+
+    .nestedGrid{
+        display:grid;
+        grid-gap: 50px;
+        padding-top: 25px;
+      }  
+}
